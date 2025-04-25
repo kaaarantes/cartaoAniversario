@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --cor-primaria: #f8f6ea;
+    --cor-secundaria: #f58992;
+    --cor-terciaria: #8fd9d9;
+    --cor-hover: #e9cf7b;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.cabecalho {
+    background-color: var(--cor-secundaria);
+    padding: 2% 0 0 15%;
+    padding: 1rem;
+    text-align: center;
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    margin: 0 1rem;
+
+}
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    box-sizing: border-box; 
+    font-family: 'Quicksand', sans-serif;
+
+}
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 5%;
+    gap: 82px;
+    text-align: center;
+}
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+}
+.apresentacao__conteudo2 {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    justify-content: center;
+    margin-bottom: 0.2rem;
+}
+.apresentacao__conteudo_texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.apresentacao__conteudo2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+}
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentacao__links__link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 21.25px 0;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
+}
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+}
+.apresentacao__imagem {
+    width: 50%;
+}
+.apresentacao__imagemBalao {
+    width: 10%;
+}
+.rodape {
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.memorias {
+    background-color: var(--cor-terciaria);
+    padding: 2rem;
+    color: #f8f6ea;
+  }
+
+  .memorias__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .card {
+    background-color: #f8f6ea;
+    color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-style: italic;
+  }
+
+  .carta {
+    background-color: var(--cor-hover);
+    padding: 2rem;
+    color: #333;
+    margin-top: 2rem;
+    border-radius: 10px;
+  }
+
+  .decoracao {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; /* evita que atrapalhem o clique em outros elementos */
+}
+
+/* Balão à esquerda */
+.balao-esquerda {
+    top: 70px;
+    left: 20px;
+    width: 120px;
+}
+
+/* Presente à direita */
+.presente-direita {
+    bottom: 30px;
+    right: 20px;
+    width: 120px;
+}
+@media (max-width: 1200px){
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
+    .apresentacao__imagem {
+        width: 100%;
+    }
+    .cabecalho {
+        padding: 5%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .balao-esquerda {
+        display: none;
+    }
+
+    .presente-direita {
+        display: none;
+    }
+}
+
+
